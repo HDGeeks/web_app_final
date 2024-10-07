@@ -1,0 +1,37 @@
+# Exclude __pycache__ directories and compiled Python files
+./__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Exclude virtual environments and related files
+.Python
+env/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Exclude tox, coverage, and testing files
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# Exclude git and other hidden directories
+.git/
+.gitignore
+.mypy_cache/
+.pytest_cache/
+.hypothesis/
+.vscode/
+.idea/
+.DS_Store
+
+# Exclude test directories and test files
+./tests
+*.test.py
+*_test.py
