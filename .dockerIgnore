@@ -3,8 +3,7 @@
 .gitignore
 .gitattributes
 
-
-# CI
+# CI Config
 .codeclimate.yml
 .travis.yml
 .taskcluster.yml
@@ -12,12 +11,12 @@
 # Docker
 docker-compose.yml
 Dockerfile
-.docker
+.docker/
 .dockerignore
 
 # Byte-compiled / optimized / DLL files
-**/__pycache__/
-**/*.py[cod]
+__pycache__/
+*.py[cod]
 
 # C extensions
 *.so
@@ -40,10 +39,11 @@ var/
 *.egg
 
 # PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
+
+# Logs
+*.log
 
 # Installer logs
 pip-log.txt
@@ -57,18 +57,8 @@ htmlcov/
 nosetests.xml
 coverage.xml
 
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-
-# Sphinx documentation
+# Documentation
 docs/_build/
-
-# PyBuilder
-target/
 
 # Virtual environment
 .env
@@ -76,19 +66,14 @@ target/
 venv/
 
 # PyCharm
-.idea
-
-# Python mode for VIM
-.ropeproject
-**/.ropeproject
+.idea/
 
 # Vim swap files
-**/*.swp
+*.swp
 
 # VS Code
 .vscode/
 
+# Exclude the tests directory and any pycache
 tests/
-/tests/
-./tests/
-./tests
+__pycache__/
